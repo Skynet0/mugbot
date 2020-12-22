@@ -55,6 +55,7 @@ async def playmugs(ctx: Context):
         if user.id == bot.user.id:
             continue
         await user.move_to(target_channel)
+        await user.edit(mute=True)
 
 
 @bot.event
